@@ -23,9 +23,9 @@ RUN git clone https://github.com/linuxlinks/gngeo.git && \
 
 COPY ./gngeorc /root/.gngeo/gngeorc
 
-COPY ./roms/neogeo.zip /usr/local/share/gngeo/neogeo.zip
+COPY ./neogeo.zip /usr/local/share/gngeo/neogeo.zip
 
-COPY ./roms/kof2002.zip /usr/local/share/gngeo/kof2002.zip
+COPY ./kof98.zip /usr/local/share/gngeo/kof2002.zip
 
 RUN wget -O - https://github.com/novnc/noVNC/archive/v1.1.0.tar.gz | tar -xzv -C /root/ && mv /root/noVNC-1.1.0 /root/novnc && ln -s /root/novnc/vnc_lite.html /root/novnc/index.html && \
     wget -O - https://github.com/novnc/websockify/archive/v0.9.0.tar.gz | tar -xzv -C /root/ && mv /root/websockify-0.9.0 /root/novnc/utils/websockify
